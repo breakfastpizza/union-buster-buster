@@ -1,6 +1,3 @@
-
-
-
 // --------------------- VARIABLES ---------------------- // 
 
 // --- COLORS --- //
@@ -10,6 +7,8 @@ $color-main: #00FA9A;
 $color-main-dark: mix($color-main, #000, 25%);
 $color-main-light: mix($color-main, #fff, 25%);
 $color-complement: complement($color-main);
+$color-complement-light: mix($color-complement, #fff, 25%);
+$color-complement-dark: mix($color-complement, #000, 25%);
 
 // --- FONTS --- //
 
@@ -22,4 +21,57 @@ $small: 25 em;
 $medium: 35 em;
 $large: 62.5 em;
 
+// --- MIXINS --- //
 
+@mixin links {
+	line-height: 1.5em;
+	text-transform:uppercase;
+	font-family:$sans-serif;
+	a {
+	  color: $color-complement;
+	  &:visited {
+	    color: $color-complement-dark;
+	  }
+	  &:hover {
+	    color: $color-complement-light;
+	    text-decoration:none;
+	  }
+	  &:active {
+	    color: $color-main;
+	  }
+	}
+}
+
+@mixin biopic {
+  
+
+}
+
+// --- NAVBAR --- // 
+
+.navbar {
+  @include links;
+	font-size:1em;
+	padding:.5em 0;
+	background-color:$black;
+
+	a {
+		margin: 0 .5em;
+	}
+
+		float:none;
+		text-align:center;
+
+		@media (min-width:$large) {
+      display: inline-block;
+			float:left;
+	
+	}
+}
+
+
+p {
+  text-align: center;
+  font-family: $sans-serif;
+  margin: 0;
+}
