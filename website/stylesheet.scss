@@ -1,0 +1,50 @@
+
+
+
+// --------------------- VARIABLES ---------------------- // 
+
+// --- COLORS --- //
+
+$palette: (
+	$black: #3b3b3b,
+	$color-main: #00FA9A,
+	$color-main-dark: mix($color-main, #000, 25%),
+	$color-main-light: mix($color-main, #fff, 25%),
+	$color-complement: complement($color-main)
+);
+
+// --- FONTS --- //
+
+$serif:'Arvo', serif;
+$sans-serif:'Oswald', sans-serif;
+
+// --- BUTTONS --- //
+
+$buttons: (
+		'play' : (
+			background: ,
+			icon: ".png"
+		),
+		'cancel' : (
+			background: red,
+			icon: ".png"
+		)
+	);
+
+	// dynamically generate button classes from the $buttons map 
+	@each $buttonName, $buttonProps in $buttons {
+		.#{$buttonName}-button {
+			background-color: map-get($buttons, background);
+			background-image: url(images/#{map-get($buttons, icon)});
+		}
+	}
+
+// --- MEDIA QUERIES --- //
+
+$breakpoints: (						
+		'small': 25 em,
+		'medium': 35 em,
+		'large': 62.5 em
+	);
+
+
