@@ -4,8 +4,8 @@
 
 // palettes
 $black: #3b3b3b;
-$grey: #424242;
-$color-main: #00ff7c; 
+$grey: #c0c0c0;
+$color-main: mix(#00ff7c, #fff, 50%); 
 $color-main-dark: mix($color-main, #000, 25%);
 $color-main-light: mix($color-main, #fff, 25%);
 $color-complement: complement($color-main);
@@ -16,7 +16,7 @@ $color-alt-dark: mix($color-alt, #000, 25%);
 $color-alt-light: mix($color-alt, #fff, 25%);
 
 // functional colors
-$color-bg: $color-main;
+$color-bg: $grey;
 $color-link: $color-alt;
 $color-vlink: $color-alt;
 $color-alink: $color-alt-light;
@@ -24,8 +24,9 @@ $color-hlink: $color-alt-light;
 
 // --- FONTS --- //
 
-$serif:'Arvo', serif;
-$sans-serif:'Oswald', sans-serif;
+$sans-serif:'VT323', sans-serif;
+$serif: $sans-serif;
+
 
 // --- MEDIA QUERIES --- //
 

@@ -14,8 +14,10 @@
 	font-family:$sans-serif;
 	a {
 	  color: $color-link;
+	  text-decoration:none;
 	  &:visited {
 	    color: $color-vlink;
+	    text-decoration:none;
 	  }
 	  &:hover {
 	    color: $color-hlink;
@@ -23,6 +25,7 @@
 	  }
 	  &:active {
 	    color: $color-alink;
+	    text-decoration:none;
 	  }
 	}
 }
