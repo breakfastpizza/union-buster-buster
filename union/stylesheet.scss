@@ -37,7 +37,7 @@ body {
 
 	img {
 		height: 25em;
-		padding: 1em;
+		padding: .25em 1em;
 		margin: 0 auto;
 		display: block;
 	}
@@ -54,6 +54,7 @@ main {
 
 .navbar {
 	@include links;
+	@include clearfix;
 	font-size:1em;
 	padding:.5em 0;
 	background-color:$black;
@@ -62,13 +63,28 @@ main {
 		margin: 0 .5em;
 	}
 
-	float:none;
 	text-align:center;
 
 	@media (min-width:$large) {
   		display: inline-block;
 		float:left;
 	
+	}
+
+	img {
+		height:50px;
+	}
+
+	ul {
+		@include clearfix;
+		margin: 0 auto;
+		width:100%;
+		padding: 0;
+		float:right;
+	}
+
+	li {
+		float:left;
 	}
 }
 

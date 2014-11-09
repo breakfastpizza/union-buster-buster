@@ -33,7 +33,7 @@ body {
     margin: 0; }
   body img {
     height: 25em;
-    padding: 1em;
+    padding: .25em 1em;
     margin: 0 auto;
     display: block; }
 
@@ -48,7 +48,6 @@ main {
   font-size: 1em;
   padding: .5em 0;
   background-color: #3b3b3b;
-  float: none;
   text-align: center; }
   .navbar a {
     color: #fdf731;
@@ -62,12 +61,29 @@ main {
     .navbar a:active {
       color: #fefdcb;
       text-decoration: none; }
+  .navbar:after {
+    content: "";
+    display: table;
+    clear: both; }
   .navbar a {
     margin: 0 .5em; }
   @media (min-width: 62.5 em) {
     .navbar {
       display: inline-block;
       float: left; } }
+  .navbar img {
+    height: 50px; }
+  .navbar ul {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    float: right; }
+    .navbar ul:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .navbar li {
+    float: left; }
 
 .about:after {
   content: "";
