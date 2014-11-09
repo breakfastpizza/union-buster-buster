@@ -73,6 +73,9 @@ body {
   height: 32px;
   margin: 8px 12px;
   padding: 0; }
+.about .capital img {
+  height: 200px;
+  margin-top: 1.5em; }
 
 .blurb p {
   padding: 0;
