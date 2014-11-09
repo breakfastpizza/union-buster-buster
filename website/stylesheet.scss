@@ -1,56 +1,18 @@
-// --------------------- VARIABLES ---------------------- // 
+// gem install sass 
+// run sass --watch on the command line in this directory to compile to css
 
-// --- COLORS --- //
 
-$black: #3b3b3b;
-$color-main: #00FA9A;
-$color-main-dark: mix($color-main, #000, 25%);
-$color-main-light: mix($color-main, #fff, 25%);
-$color-complement: complement($color-main);
-$color-complement-light: mix($color-complement, #fff, 25%);
-$color-complement-dark: mix($color-complement, #000, 25%);
+// importing partials: as long as the partial starts with _, it won't compile to its own
+// css file, but will just import its content into stylesheet.css when that compiles.
 
-// --- FONTS --- //
-
-$serif:'Arvo', serif;
-$sans-serif:'Oswald', sans-serif;
-
-// --- MEDIA QUERIES --- //
-
-$small: 25 em;
-$medium: 35 em;
-$large: 62.5 em;
-
-// --- MIXINS --- //
-
-@mixin links {
-	line-height: 1.5em;
-	text-transform:uppercase;
-	font-family:$sans-serif;
-	a {
-	  color: $color-complement;
-	  &:visited {
-	    color: $color-complement-dark;
-	  }
-	  &:hover {
-	    color: $color-complement-light;
-	    text-decoration:none;
-	  }
-	  &:active {
-	    color: $color-main;
-	  }
-	}
-}
-
-@mixin biopic {
-    height: 4em;
-    padding: 1em;
-}
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
 
 // --- NAVBAR --- // 
 
 .navbar {
-  @include links;
+  @include links; // in _mixins.scss
 	font-size:1em;
 	padding:.5em 0;
 	background-color:$black;
@@ -59,28 +21,42 @@ $large: 62.5 em;
 		margin: 0 .5em;
 	}
 
-		float:none;
-		text-align:center;
+	float:none;
+	text-align:center;
 
-		@media (min-width:$large) {
-      display: inline-block;
-			float:left;
+	@media (min-width:$large) {
+  		display: inline-block;
+		float:left;
 	
 	}
 }
 
-h1 {
-  text-align:center;
-}
+// --- MAIN STYLES --- //
 
-p {
-  text-align: center;
-  font-family: $sans-serif;
-  margin: 0;
-}
+.main {
+	
+	background-color: $color-alt;
+	color: $black;
 
-img {
-  @include biopic;
-}
+	h1 {
+	  font-family: $serif;
+	  text-align:center;
+	}
 
+	h3 {
+	  font-family: $serif;
+	}
+
+	img {
+	  @include biopic; // in _mixins.scss
+	}
+
+	p {
+	  text-align: center;
+	  font-family: $sans-serif;
+	  margin: 0;
+	}
+
+	
+}
 
