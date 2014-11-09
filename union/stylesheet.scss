@@ -77,6 +77,10 @@ body {
 		list-style-type:none;
 
 	}
+
+	p {
+		padding-top: 1em;
+	}
 	img {
 		float:left;
 		height: 32px;
@@ -85,3 +89,11 @@ body {
 	}
 
 }
+
+.blurb
+	{
+		p {
+			padding:0;
+			text-align:center;
+		}
+	}

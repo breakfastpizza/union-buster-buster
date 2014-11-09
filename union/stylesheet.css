@@ -66,10 +66,16 @@ body {
 .about li {
   text-decoration: none;
   list-style-type: none; }
+.about p {
+  padding-top: 1em; }
 .about img {
   float: left;
   height: 32px;
   margin: 8px 12px;
   padding: 0; }
+
+.blurb p {
+  padding: 0;
+  text-align: center; }
 
 /*# sourceMappingURL=stylesheet.css.map */
