@@ -2,16 +2,25 @@
 
 // --- COLORS --- //
 
+// palettes
 $black: #3b3b3b;
-$color-main: skyblue; // change this!
+$grey: #424242;
+$color-main: #00ff7c; 
 $color-main-dark: mix($color-main, #000, 25%);
 $color-main-light: mix($color-main, #fff, 25%);
 $color-complement: complement($color-main);
 $color-complement-dark: mix($color-complement, #000, 25%);
 $color-complement-light: mix($color-complement, #fff, 25%);
-$color-alt: mediumspringgreen; // change this!
+$color-alt: #fdf731;
 $color-alt-dark: mix($color-alt, #000, 25%);
 $color-alt-light: mix($color-alt, #fff, 25%);
+
+// functional colors
+$color-bg: $color-main;
+$color-link: $color-alt;
+$color-vlink: $color-alt;
+$color-alink: $color-alt-light;
+$color-hlink: $color-alt-light;
 
 // --- FONTS --- //
 

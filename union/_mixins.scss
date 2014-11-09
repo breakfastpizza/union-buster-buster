@@ -5,16 +5,16 @@
 	text-transform:uppercase;
 	font-family:$sans-serif;
 	a {
-	  color: $color-complement;
+	  color: $color-link;
 	  &:visited {
-	    color: $color-complement-dark;
+	    color: $color-vlink;
 	  }
 	  &:hover {
-	    color: $color-complement-light;
+	    color: $color-hlink;
 	    text-decoration:none;
 	  }
 	  &:active {
-	    color: $color-main;
+	    color: $color-alink;
 	  }
 	}
 }
