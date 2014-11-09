@@ -4,6 +4,10 @@ body {
   font-family: "Oswald", sans-serif;
   background-color: #00ff7c;
   color: #3b3b3b; }
+  body:after {
+    content: "";
+    display: table;
+    clear: both; }
   body a {
     color: #fdf731; }
     body a:visited {
@@ -54,5 +58,18 @@ body {
     .navbar {
       display: inline-block;
       float: left; } }
+
+.about:after {
+  content: "";
+  display: table;
+  clear: both; }
+.about li {
+  text-decoration: none;
+  list-style-type: none; }
+.about img {
+  float: left;
+  height: 32px;
+  margin: 8px 12px;
+  padding: 0; }
 
 /*# sourceMappingURL=stylesheet.css.map */

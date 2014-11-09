@@ -1,5 +1,13 @@
 // --- MIXINS --- //
 
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 @mixin links {
 	line-height: 1.5em;
 	text-transform:uppercase;

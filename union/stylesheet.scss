@@ -12,6 +12,7 @@
 // --- BODY STYLES --- //
 
 body {
+	@include clearfix;
 	@include links;
 	background-color: $color-bg;
 	color: $black;
@@ -66,3 +67,21 @@ body {
 	}
 }
 
+// --- ABOUT --- //
+
+.about {
+	@include clearfix;
+
+	li {
+		text-decoration:none;
+		list-style-type:none;
+
+	}
+	img {
+		float:left;
+		height: 32px;
+		margin: 8px 12px;
+		padding: 0;
+	}
+
+}
