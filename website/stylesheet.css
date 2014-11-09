@@ -1,0 +1,38 @@
+.navbar {
+  line-height: 1.5em;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-size: 1em;
+  padding: .5em 0;
+  background-color: #3b3b3b;
+  float: none;
+  text-align: center; }
+  .navbar a {
+    color: #fa0060; }
+    .navbar a:visited {
+      color: #3e0018; }
+    .navbar a:hover {
+      color: #fdbfd7;
+      text-decoration: none; }
+    .navbar a:active {
+      color: #00FA9A; }
+  .navbar a {
+    margin: 0 .5em; }
+  @media (min-width: 62.5 em) {
+    .navbar {
+      display: inline-block;
+      float: left; } }
+
+h1 {
+  text-align: center; }
+
+p {
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  margin: 0; }
+
+img {
+  height: 4em;
+  padding: 1em; }
+
+/*# sourceMappingURL=stylesheet.css.map */
