@@ -5,6 +5,7 @@
 // importing partials: as long as the partial starts with _, it won't compile to its own
 // css file, but will just import its content into stylesheet.css when that compiles.
 
+@import "_reset.scss";
 @import "_variables.scss";
 @import "_mixins.scss";
 
@@ -20,28 +21,42 @@
 		margin: 0 .5em;
 	}
 
-		float:none;
-		text-align:center;
+	float:none;
+	text-align:center;
 
-		@media (min-width:$large) {
-      display: inline-block;
-			float:left;
+	@media (min-width:$large) {
+  		display: inline-block;
+		float:left;
 	
 	}
 }
 
-h1 {
-  text-align:center;
-}
+// --- MAIN STYLES --- //
 
-p {
-  text-align: center;
-  font-family: $sans-serif;
-  margin: 0;
-}
+.main {
+	
+	background-color: $alt-color;
+	color: $black;
 
-img {
-  @include biopic; // in _mixins.scss
-}
+	h1 {
+	  font-family: $serif;
+	  text-align:center;
+	}
 
+	h3 {
+	  font-family: $serif;
+	}
+
+	img {
+	  @include biopic; // in _mixins.scss
+	}
+
+	p {
+	  text-align: center;
+	  font-family: $sans-serif;
+	  margin: 0;
+	}
+
+	
+}
 

@@ -7,8 +7,8 @@ $color-main: #00FA9A; // change this!
 $color-main-dark: mix($color-main, #000, 25%);
 $color-main-light: mix($color-main, #fff, 25%);
 $color-complement: complement($color-main);
-$color-complement-light: mix($color-complement, #fff, 25%);
 $color-complement-dark: mix($color-complement, #000, 25%);
+$color-complement-light: mix($color-complement, #fff, 25%);
 $color-alt: #0000FA; // change this!
 $color-alt-dark: mix($color-alt, #000, 25%);
 $color-alt-light: mix($color-alt, #fff, 25%);
