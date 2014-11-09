@@ -1,0 +1,25 @@
+// --------------------- VARIABLES ---------------------- // 
+
+// --- COLORS --- //
+
+$black: #3b3b3b;
+$color-main: skyblue; // change this!
+$color-main-dark: mix($color-main, #000, 25%);
+$color-main-light: mix($color-main, #fff, 25%);
+$color-complement: complement($color-main);
+$color-complement-dark: mix($color-complement, #000, 25%);
+$color-complement-light: mix($color-complement, #fff, 25%);
+$color-alt: mediumspringgreen; // change this!
+$color-alt-dark: mix($color-alt, #000, 25%);
+$color-alt-light: mix($color-alt, #fff, 25%);
+
+// --- FONTS --- //
+
+$serif:'Arvo', serif;
+$sans-serif:'Oswald', sans-serif;
+
+// --- MEDIA QUERIES --- //
+
+$small: 25 em;
+$medium: 35 em;
+$large: 62.5 em;
