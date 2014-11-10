@@ -2,24 +2,55 @@
 	<head>
 	<title>UNION BUSTER BUSTER</title>
 
+	<!-- Import jQuery -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
 	<!-- Google fonts: feel free to change these -->
 	<link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400|VT323:400" rel="stylesheet" type="text/css">
 
 	<!-- Imports the main stylesheet. You don't have to import the partials in the html; they're already imported into stylesheet.css via Sass @import. -->
 	<link href="http://luciankahn.com/union/stylesheet.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-	<!-- Unity Plugin Header Content. Documentation: http://docs.unity3d.com/Manual/WebPlayerDeployment.html -->	
-
-		<script type="text/javascript">
+	<!-- Unity Plugin Header Content. Documentation: http://docs.unity3d.com/Manual/WebPlayerDeployment.html -->
+    	<script type="text/javascript">
 	<!--
-	var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
-	if (document.location.protocol == 'https:')
-	    unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-	document.write('<script type="text/javascript" src="' + unityObjectUrl + '"></script>');
-	-->
-	var u = new UnityObject2();
-	u.initPlugin(jQuery("#unityPlayer")[0], "Example.unity3d");
-		</script>
+        	var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+        	if (document.location.protocol == 'https:')
+            		unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+        	document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+        -->
+    	</script>
+        <script type="text/javascript">
+        var u = new UnityObject2();
+        u.observeProgress(function (progress) {
+            var $missingScreen = jQuery(progress.targetEl).find(".missing");
+            switch(progress.pluginStatus) {
+                case "unsupported":
+                    showUnsupported();
+                break;
+                case "broken":
+                    alert("You will need to restart your browser after installation.");
+                break;
+                case "missing":
+                    $missingScreen.find("a").click(function (e) {
+                        e.stopPropagation();
+                        e.preventDefault();
+                        u.installPlugin();
+                        return false;
+                    });
+                    $missingScreen.show();
+                break;
+                case "installed":
+                    $missingScreen.remove();
+                break;
+                case "first":
+                break;
+            }
+        });
+        jQuery(function(){
+            u.initPlugin(jQuery("#unityPlayer")[0], "UnionBusterBuster.unity3d");
+        });
+        </script>
 
 	<!-- End of Unity Plugin Header Content -->
 
