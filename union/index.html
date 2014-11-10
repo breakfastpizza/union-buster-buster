@@ -8,8 +8,22 @@
 	<!-- Imports the main stylesheet. You don't have to import the partials in the html; they're already imported into stylesheet.css via Sass @import. -->
 	<link href="http://luciankahn.com/union/stylesheet.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-	</head>
+	<!-- Unity Plugin Header Content. Documentation: http://docs.unity3d.com/Manual/WebPlayerDeployment.html -->	
 
+		<script type="text/javascript">
+	<!--
+	var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+	if (document.location.protocol == 'https:')
+	    unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+	document.write('<script type="text/javascript" src="' + unityObjectUrl + '"></script>');
+	-->
+	var u = new UnityObject2();
+	u.initPlugin(jQuery("#unityPlayer")[0], "Example.unity3d");
+		</script>
+
+	<!-- End of Unity Plugin Header Content -->
+
+	</head>
 
   <body>
 
@@ -26,6 +40,16 @@
 	<div class="main">
 
 	  <img src="http://luciankahn.com/union/img/title-card.png" height="300px">
+
+	  <!-- Embedded Unity Player -->
+	  <div id="unityPlayer">
+	      <div class="missing">
+	          <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+	              <img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+	          </a>
+	      </div>
+	  </div>
+	  <!-- End of Embedded Unity Player -->
 
 	</div>
 	</main>
