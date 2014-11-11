@@ -11,7 +11,7 @@
 @mixin links {
 	line-height: 1.5em;
 	text-transform:uppercase;
-	font-family:$sans-serif;
+	font-family:$font-body;
 	a {
 	  color: $color-link;
 	  text-decoration:none;

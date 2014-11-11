@@ -1,7 +1,7 @@
 body {
   line-height: 1.5em;
   text-transform: uppercase;
-  font-family: "VT323", sans-serif;
+  font-family: "Ubuntu Mono", "System", sans-serif;
   background-color: #c0c0c0;
   color: #3b3b3b; }
   body:after {
@@ -21,15 +21,15 @@ body {
       color: #fefdcb;
       text-decoration: none; }
   body h1 {
-    font-family: "VT323", sans-serif;
+    font-family: "VT323", "System", sans-serif;
     text-align: center; }
   body h3 {
-    font-family: "VT323", sans-serif; }
+    font-family: "VT323", "System", sans-serif; }
   body img {
     height: 4em;
     padding: 1em; }
   body p {
-    font-family: "VT323", sans-serif;
+    font-family: "Ubuntu Mono", "System", sans-serif;
     margin: 0; }
   body img {
     height: 25em;
@@ -44,7 +44,7 @@ main {
 .navbar {
   line-height: 1.5em;
   text-transform: uppercase;
-  font-family: "VT323", sans-serif;
+  font-family: "Ubuntu Mono", "System", sans-serif;
   font-size: 1em;
   padding: .5em 0;
   background-color: #3b3b3b;

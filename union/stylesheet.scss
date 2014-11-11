@@ -18,12 +18,12 @@ body {
 	color: $black;
 
 	h1 {
-	  font-family: $serif;
+	  font-family: $font-head;
 	  text-align:center;
 	}
 
 	h3 {
-	  font-family: $serif;
+	  font-family: $font-head;
 	}
 
 	img {
@@ -31,7 +31,7 @@ body {
 	}
 
 	p {
-	  font-family: $sans-serif;
+	  font-family: $font-body;
 	  margin: 0;
 	}
 
