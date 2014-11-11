@@ -14,6 +14,12 @@
 body {
 	@include clearfix;
 	@include links;
+
+	// border box
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  	box-sizing: border-box;         /* Opera/IE 8+ */
+
 	background-color: $color-bg;
 	color: $black;
 
@@ -63,13 +69,9 @@ main {
 		margin: 0 .5em;
 	}
 
+	width: 100%;
 	text-align:center;
-
-	@media (min-width:$large) {
-  		display: inline-block;
-		float:left;
-	
-	}
+	display: inline-block;
 
 	img {
 		height:50px;
@@ -103,17 +105,36 @@ main {
 		padding-top: 1em;
 	}
 	img {
-		float:left;
 		height: 32px;
 		margin: 8px 12px;
 		padding: 0;
 	}
 
-	.capital {
-		img {
-			height:200px;
-			margin-top:1.5em;
-		}
+	.characters {
+		// on small screens, characters are stacked vertically with small images.
+		// they inherit the small image size from the .about cascade.  
+		// HELP: there's a problem with spacing!
+
+		// on large screens, characters are in 4 columns with large images. 
+		// HELP: there's a problem with vertical alignment!
+		
+		@media (min-width:$large) {
+			width: 100%;
+			float:left;
+			display:inline-block;
+
+			.col {
+				display: inline-block;
+				// float:left;
+				width:20%;
+				padding:1em;
+			}
+
+			img {
+				height:100px;
+			}
+		} // end of media query
+
 	}
 
 }

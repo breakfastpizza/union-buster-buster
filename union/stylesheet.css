@@ -2,6 +2,12 @@ body {
   line-height: 1.5em;
   text-transform: uppercase;
   font-family: "Ubuntu Mono", "System", sans-serif;
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */
   background-color: #c0c0c0;
   color: #3b3b3b; }
   body:after {
@@ -48,7 +54,9 @@ main {
   font-size: 1em;
   padding: .5em 0;
   background-color: #3b3b3b;
-  text-align: center; }
+  width: 100%;
+  text-align: center;
+  display: inline-block; }
   .navbar a {
     color: #fdf731;
     text-decoration: none; }
@@ -67,10 +75,6 @@ main {
     clear: both; }
   .navbar a {
     margin: 0 .5em; }
-  @media (min-width: 62.5 em) {
-    .navbar {
-      display: inline-block;
-      float: left; } }
   .navbar img {
     height: 50px; }
   .navbar ul {
@@ -95,13 +99,20 @@ main {
 .about p {
   padding-top: 1em; }
 .about img {
-  float: left;
   height: 32px;
   margin: 8px 12px;
   padding: 0; }
-.about .capital img {
-  height: 200px;
-  margin-top: 1.5em; }
+@media (min-width: 865px) {
+  .about .characters {
+    width: 100%;
+    float: left;
+    display: inline-block; }
+    .about .characters .col {
+      display: inline-block;
+      width: 20%;
+      padding: 1em; }
+    .about .characters img {
+      height: 100px; } }
 
 .blurb p {
   padding: 0;
