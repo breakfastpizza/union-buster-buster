@@ -1,7 +1,6 @@
 <img src="http://luciankahn.com/union/img/title-card.png" height="300px">
 
 ###YOU WANT FAIR PAY AND BENEFITS!
-
 ###THE BOSSES WANT TO BUST YOUR UNION!
 
 
