@@ -3,10 +3,10 @@
 	<title>About UNION BUSTER BUSTER</title>
 
 	<!-- Google fonts: feel free to change these -->
-	<link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400|VT323:400" rel="stylesheet" type="text/css">
+	<link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|VT323:400" rel="stylesheet" type="text/css">
 
 	<!-- Imports the main stylesheet. You don't have to import the partials in the html; they're already imported into stylesheet.css via Sass @import. -->
-	<link href="http://luciankahn.com/union/stylesheet.css" media="screen, projection" rel="stylesheet" type="text/css" />
+	<link href="stylesheet.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 	</head>
 
@@ -15,8 +15,8 @@
    <nav>
 		<div class="navbar">
 				<ul>
-					<li><a href="http://luciankahn.com/union/index.html"><img src="http://luciankahn.com/union/img/play-button.png" /></a></li>
-					<li><a href="http://luciankahn.com/union/about.html"><img src="http://luciankahn.com/union/img/about-button.png" /></a></li>
+					<li><a href="index.html"><img src="img/play-button.png" /></a></li>
+					<li><a href="about.html"><img src="img/about-button.png" /></a></li>
 				</ul>
 		</div>
 	</nav>
@@ -32,7 +32,7 @@
 			<p>You want fair pay and benefits!</p>
 		  	<p>The bosses want to bust your union!</p>
 		  	<p>Use your marching band of coworkers to fight company propaganda!</p>
-		  	<p>A game of rhythm, speed, and solidarity.</p>  
+		  	<p>A game of rhythm, speed, and solidarity.</p>
 		</div>
 
 		<!-- <div class="capital">
@@ -43,29 +43,37 @@
 
 		<div class="characters">
 			<div class="col">
+				<img src="img/drum_2x.png" />
 				<ul>
-					<li><img src="http://luciankahn.com/union/img/drum.png" /></li>
-					<li><p><strong>Renata</strong>: Drums, Tech Support</p></li>
+					<li>Renata</li>
+					<li>Drums</li>
+					<li>Tech Support</li>
 				</ul>
 			</div>
 			<div class="col">
+			<img src="img/tuba_2x.png" />
 				<ul>
-					<li><img src="http://luciankahn.com/union/img/tuba.png" /></li>	
-					<li><p><strong>Soo Jin</strong>: Tuba, Accounting</p></li>
+					<li>Soo Jin</li>
+					<li>Tuba</li>
+					<li>Accounting</li>
 				</ul>
 			</div>
 			<div class="col">
+			<img src="img/keytar_2x.png" />
 				<ul>
-					<li><img src="http://luciankahn.com/union/img/keytar.png" /></li>	
-					<li><p><strong>Raju</strong>: Keytar, HR</p></li>
+					<li>Raju</li>
+					<li>Keytar</li>
+					<li>HR</li>
 				</ul>
 			</div>
 			<div class="col">
+			<img src="img/flute_2x.png" />
 				<ul>
-					<li><img src="http://luciankahn.com/union/img/flute.png" />	</li>
-					<li><p><strong>Steve</strong>: Flute, Sales</p></li>
+					<li>Steve</li>
+					<li>Flute</li>
+					<li>Sales</li>
 				</ul>
-			</div>		
+			</div>
 		</div>
 
 
@@ -75,25 +83,19 @@
 
 		<h3>Dossier of Developers</h3>
 
-		<ul>
+		<ul class="devs">
 
-			<li><img src="http://luciankahn.com/union/img/green.png" /> <p>Adil Soubki: Music Composition, Sound Effects, Art</p></li><div style="clear: both;"></div>
+			<li><img src="img/green.png" /> <p>Adil Soubki: Music Composition, Sound Effects, Art</p></li><div style="clear: both;"></div>
 
-			<li><img src="http://luciankahn.com/union/img/orange.png" /><p><a href="http://jonnyaiello.us">Jonathan Aiello</a>: Programming Lead, Game Code & Logic</p></li><div style="clear: both;"></div>
+			<li><img src="img/orange.png" /><p><a href="http://jonnyaiello.us">Jonathan Aiello</a>: Programming Lead, Game Code &amp; Logic</p></li><div style="clear: both;"></div>
 
-			<li><img src="http://luciankahn.com/union/img/grey.png" /> <p><a href="http://luciankahn.com/blog">Lucian Kahn</a>: Writing Lead, Concept & Characters, Website Architecture, Art</p></li><div style="clear: both;"></div>
+			<li><img src="img/grey.png" /> <p><a href="http://luciankahn.com/blog">Lucian Kahn</a>: Writing Lead, Concept &amp; Characters, Website Architecture, Art</p></li><div style="clear: both;"></div>
 
-			<li><img src="http://luciankahn.com/union/img/magenta.png" /> <p><a href="http://bedlogic.net.">Niko Nawalany</a>: Art Lead, Website Design</p></li><div style="clear: both;"></div>
+			<li><img src="img/magenta.png" /> <p><a href="http://bedlogic.net.">Niko Nawalany</a>: Art Lead, Website Design</p></li><div style="clear: both;"></div>
 
-			<li><img src="http://luciankahn.com/union/img/blue.png" /><p>Samuel Abram: Music Composition</p></li><div style="clear: both;"></div>
+			<li><img src="img/blue.png" /><p>Samuel Abram: Music Composition</p></li><div style="clear: both;"></div>
 
 		</ul>
-
-		<p></p>
-
-		<!-- <img src="copymachine" /> -->
-
-		<p></p>
 
 		<h3>Bevy of Bots</h3>
 		<p><strong>Union Buster Buster</strong> was made in two days for GAMERella 2014: "Boss Up" at <a href="http://gamecenter.nyu.edu/" target="_blank">NYU Game Center</a>. We wrote the game in <a href="http://unity3d.com" target="_blank">Unity</a>. We created the sprites in <a href="https://github.com/Pixen/Pixen" target="_blank">Pixen</a>. We wrote the music on Gameboy using <a href="http://www.littlesounddj.com/lsd/" target="_blank">LSDJ</a>. We wrote the website in <a href="http://sass-lang.com/" target="_blank">Sass</a> and html. Inspired by <a href="https://www.facebook.com/abetterkaplan" target="_blank">Teachers and Students for a Better Kaplan</a> and <a href="http://rudemechanicalorchestra.org/" target="_blank">Rude Mechanical Orchestra</a>.</p>

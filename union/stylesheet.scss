@@ -1,4 +1,4 @@
-// gem install sass 
+// gem install sass
 // run sass --watch on the command line in this directory to compile to css
 
 
@@ -42,13 +42,13 @@ body {
 	}
 
 	img {
-		height: 25em;
+		/*height: 25em;*/
 		padding: .25em 1em;
 		margin: 0 auto;
 		display: block;
 	}
 
-	
+
 }
 
 main {
@@ -56,7 +56,7 @@ main {
 	width: 90%;
 }
 
-// --- NAVBAR --- // 
+// --- NAVBAR --- //
 
 .navbar {
 	@include links;
@@ -103,38 +103,67 @@ main {
 
 	p {
 		padding-top: 1em;
+		text-align: center;
 	}
 	img {
-		height: 32px;
+		height: 15%;
 		margin: 8px 12px;
 		padding: 0;
 	}
 
 	.characters {
 		// on small screens, characters are stacked vertically with small images.
-		// they inherit the small image size from the .about cascade.  
+		// they inherit the small image size from the .about cascade.
 		// HELP: there's a problem with spacing!
-
-		// on large screens, characters are in 4 columns with large images. 
+		// on large screens, characters are in 4 columns with large images.
 		// HELP: there's a problem with vertical alignment!
-		
+
+		margin-bottom: 2em;
+
 		@media (min-width:$large) {
 			width: 100%;
 			float:left;
 			display:inline-block;
+			margin-bottom: 2em;
 
 			.col {
 				display: inline-block;
-				// float:left;
+				float: left;
 				width:20%;
 				padding:1em;
 			}
 
 			img {
-				height:100px;
+				/*float: left;*/
+  				margin-right: 1.5em;
+			}
+			ul {
+				/*float: left;*/
+				padding: 0;
+				margin: 0;
+				margin-top: 0.5em;
+				line-height: 1.3em;
+				list-style-type: none;
+			}
+			ul li:first-child {
+				font-weight: bold;
+				font-size: 1.5em;
+				line-height: 1em;
 			}
 		} // end of media query
 
+	}
+
+	.devs {
+		margin-bottom: 2em;
+
+		img {
+			height: 32px;
+			float: left;
+		}
+		p {
+			float: left;
+		}
 	}
 
 }

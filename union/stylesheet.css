@@ -38,7 +38,7 @@ body {
     font-family: "Ubuntu Mono", "System", sans-serif;
     margin: 0; }
   body img {
-    height: 25em;
+    /*height: 25em;*/
     padding: .25em 1em;
     margin: 0 auto;
     display: block; }
@@ -97,22 +97,46 @@ main {
   text-decoration: none;
   list-style-type: none; }
 .about p {
-  padding-top: 1em; }
+  padding-top: 1em;
+  text-align: center; }
 .about img {
-  height: 32px;
+  height: 15%;
   margin: 8px 12px;
   padding: 0; }
-@media (min-width: 865px) {
-  .about .characters {
-    width: 100%;
-    float: left;
-    display: inline-block; }
-    .about .characters .col {
+.about .characters {
+  margin-bottom: 2em; }
+  @media (min-width: 865px) {
+    .about .characters {
+      width: 100%;
+      float: left;
       display: inline-block;
-      width: 20%;
-      padding: 1em; }
-    .about .characters img {
-      height: 100px; } }
+      margin-bottom: 2em; }
+      .about .characters .col {
+        display: inline-block;
+        float: left;
+        width: 20%;
+        padding: 1em; }
+      .about .characters img {
+        /*float: left;*/
+        margin-right: 1.5em; }
+      .about .characters ul {
+        /*float: left;*/
+        padding: 0;
+        margin: 0;
+        margin-top: 0.5em;
+        line-height: 1.3em;
+        list-style-type: none; }
+      .about .characters ul li:first-child {
+        font-weight: bold;
+        font-size: 1.5em;
+        line-height: 1em; } }
+.about .devs {
+  margin-bottom: 2em; }
+  .about .devs img {
+    height: 32px;
+    float: left; }
+  .about .devs p {
+    float: left; }
 
 .blurb p {
   padding: 0;
