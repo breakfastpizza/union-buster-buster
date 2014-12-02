@@ -89,6 +89,25 @@ main {
   .navbar li {
     float: left; }
 
+.home-link, .about-link {
+  display: block;
+  background-image: url(http://i.imgur.com/IlRz7Py.png);
+  height: 98px; }
+
+.about-link {
+  width: 284px;
+  background-position: 0px 98px; }
+
+.about-link:active {
+  background-position: 284px 98px; }
+
+.home-link {
+  width: 226px;
+  background-position: 0px 0px; }
+
+.home-link:active {
+  background-position: 342px 0px; }
+
 .about:after {
   content: "";
   display: table;
