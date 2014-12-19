@@ -88,26 +88,30 @@ main {
 	li {
 		float:left;
 	}
-}
-// --- LINK SPRITE STYLING --- //
-.home-link, .about-link {
-	display:block;
-	background-image: url(http://i.imgur.com/IlRz7Py.png);
-	height:98px;
-}
-.about-link {
-	width:284px;
-	background-position: 0px 98px;
-}
-.about-link:active {
-	background-position: 284px 98px;
-}
-.home-link {
-	width:226px;
-	background-position: 0px 0px;
-}
-.home-link:active {
-	background-position: 342px 0px;
+	// --- LINK SPRITE STYLING --- //
+
+	// HELP! This is broken! The HOME and ABOUT links don't display a background image at all :(
+	// Here is a link to my functionality demo: http://codepen.io/bedlogic/pen/ByoJYv/
+
+	.home-link, .about-link {
+		display:block;
+		background-image: url(img/buttons.png);
+		height:98px;
+	}
+	.about-link {
+		width:284px;
+		background-position: 0px 98px;
+	}
+	.about-link:active {
+		background-position: 284px 98px;
+	}
+	.home-link {
+		width:226px;
+		background-position: 0px 0px;
+	}
+	.home-link:active {
+		background-position: 342px 0px;
+	}
 }
 
 // --- ABOUT --- //
@@ -195,3 +199,7 @@ main {
 			text-align:center;
 		}
 	}
+
+.title {
+	width: 10em;
+}

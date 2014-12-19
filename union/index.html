@@ -5,53 +5,71 @@
 	<!-- Import jQuery -->
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 
-	<!-- Google fonts: feel free to change these -->
-    <link href="http://luciankahn.com/union/stylesheet.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
-	<!-- Imports the main stylesheet. You don't have to import the partials in the html; they're already imported into stylesheet.css via Sass @import. -->
-	<link href="http://luciankahn.com/union/stylesheet.css" media="screen, projection" rel="stylesheet" type="text/css" />
+
+    <!-- Google fonts: feel free to change these -->
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic,700italic|VT323:400" rel="stylesheet" type="text/css">
+
+    <!-- Imports the main stylesheet. You don't have to import the partials in the html; they're already imported into stylesheet.css via Sass @import. -->
+    <link href="stylesheet.css" media="screen, projection" rel="stylesheet" type="text/css" />
 
 	<!-- Unity Plugin Header Content. Documentation: http://docs.unity3d.com/Manual/WebPlayerDeployment.html -->
     	<script type="text/javascript">
-	<!--
-        	var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
-        	if (document.location.protocol == 'https:')
-            		unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
-        	document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
-        -->
+            <!--
+            var unityObjectUrl = "http://webplayer.unity3d.com/download_webplayer-3.x/3.0/uo/UnityObject2.js";
+            if (document.location.protocol == 'https:')
+                unityObjectUrl = unityObjectUrl.replace("http://", "https://ssl-");
+            document.write('<script type="text\/javascript" src="' + unityObjectUrl + '"><\/script>');
+            -->
     	</script>
         <script type="text/javascript">
-        var u = new UnityObject2();
-        u.observeProgress(function (progress) {
-            var $missingScreen = jQuery(progress.targetEl).find(".missing");
-            switch(progress.pluginStatus) {
-                case "unsupported":
-                    showUnsupported();
-                break;
-                case "broken":
-                    alert("You will need to restart your browser after installation.");
-                break;
-                case "missing":
-                    $missingScreen.find("a").click(function (e) {
-                        e.stopPropagation();
-                        e.preventDefault();
-                        u.installPlugin();
-                        return false;
-                    });
-                    $missingScreen.show();
-                break;
-                case "installed":
-                    $missingScreen.remove();
-                break;
-                case "first":
-                break;
-            }
-        });
-        jQuery(function(){
-            u.initPlugin(jQuery("#unityPlayer")[0], "UnionBusterBuster.unity3d");
-        });
-        </script>
+            <!--
+            var config = {
+                width: 960,
+                height: 600,
+                params: { enableDebugging:"0" }
 
+            };
+            var u = new UnityObject2(config);
+
+            jQuery(function() {
+
+                var $missingScreen = jQuery("#unityPlayer").find(".missing");
+                var $brokenScreen = jQuery("#unityPlayer").find(".broken");
+                $missingScreen.hide();
+                $brokenScreen.hide();
+
+                u.observeProgress(function (progress) {
+                    switch(progress.pluginStatus) {
+                        case "broken":
+                            $brokenScreen.find("a").click(function (e) {
+                                e.stopPropagation();
+                                e.preventDefault();
+                                u.installPlugin();
+                                return false;
+                            });
+                            $brokenScreen.show();
+                        break;
+                        case "missing":
+                            $missingScreen.find("a").click(function (e) {
+                                e.stopPropagation();
+                                e.preventDefault();
+                                u.installPlugin();
+                                return false;
+                            });
+                            $missingScreen.show();
+                        break;
+                        case "installed":
+                            $missingScreen.remove();
+                        break;
+                        case "first":
+                        break;
+                    }
+                });
+                u.initPlugin(jQuery("#unityPlayer")[0], "web_build.unity3d");
+            });
+            -->
+        </script>
 	<!-- End of Unity Plugin Header Content -->
 
 	</head>
@@ -70,16 +88,21 @@
 	<main>
 	<div class="main">
 
-	  <img src="http://luciankahn.com/union/img/title-card.png" height="300px">
+	  <img class="title" src="http://luciankahn.com/union/img/title-card.png" height="300px">
 
 	  <!-- Embedded Unity Player -->
 	  <div id="unityPlayer">
-	      <div class="missing">
-	          <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
-	              <img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
-	          </a>
-	      </div>
-	  </div>
+        <div class="missing">
+            <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now!">
+                <img alt="Unity Web Player. Install now!" src="http://webplayer.unity3d.com/installation/getunity.png" width="193" height="63" />
+            </a>
+        </div>
+        <div class="broken">
+            <a href="http://unity3d.com/webplayer/" title="Unity Web Player. Install now! Restart your browser after install.">
+                <img alt="Unity Web Player. Install now! Restart your browser after install." src="http://webplayer.unity3d.com/installation/getunityrestart.png" width="193" height="63" />
+            </a>
+        </div>
+    </div>
 	  <!-- End of Embedded Unity Player -->
 
 	</div>

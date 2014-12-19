@@ -88,25 +88,20 @@ main {
       clear: both; }
   .navbar li {
     float: left; }
-
-.home-link, .about-link {
-  display: block;
-  background-image: url(http://i.imgur.com/IlRz7Py.png);
-  height: 98px; }
-
-.about-link {
-  width: 284px;
-  background-position: 0px 98px; }
-
-.about-link:active {
-  background-position: 284px 98px; }
-
-.home-link {
-  width: 226px;
-  background-position: 0px 0px; }
-
-.home-link:active {
-  background-position: 342px 0px; }
+  .navbar .home-link, .navbar .about-link {
+    display: block;
+    background-image: url(img/buttons.png);
+    height: 98px; }
+  .navbar .about-link {
+    width: 284px;
+    background-position: 0px 98px; }
+  .navbar .about-link:active {
+    background-position: 284px 98px; }
+  .navbar .home-link {
+    width: 226px;
+    background-position: 0px 0px; }
+  .navbar .home-link:active {
+    background-position: 342px 0px; }
 
 .about:after {
   content: "";
@@ -160,5 +155,8 @@ main {
 .blurb p {
   padding: 0;
   text-align: center; }
+
+.title {
+  width: 10em; }
 
 /*# sourceMappingURL=stylesheet.css.map */
