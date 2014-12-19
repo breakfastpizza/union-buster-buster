@@ -8,29 +8,37 @@ body {
   /* Firefox, other Gecko */
   box-sizing: border-box;
   /* Opera/IE 8+ */
-  background-color: #c0c0c0;
-  color: #3b3b3b; }
+  background-color: #e6e6e6;
+  color: #3b3b3b;
+  margin: 0; }
   body:after {
     content: "";
     display: table;
     clear: both; }
   body a {
-    color: #fdf731;
+    color: #0095FE;
     text-decoration: none; }
     body a:visited {
-      color: #fdf731;
+      color: #0095FE;
       text-decoration: none; }
     body a:hover {
-      color: #fefdcb;
+      color: #bfe4fe;
       text-decoration: none; }
     body a:active {
-      color: #fefdcb;
+      color: #bfe4fe;
       text-decoration: none; }
   body h1 {
     font-family: "VT323", "System", sans-serif;
     text-align: center; }
   body h3 {
-    font-family: "VT323", "System", sans-serif; }
+    font-family: "VT323", "System", sans-serif;
+    font-size: 2.2em;
+    -webkit-font-smoothing: antialiased;
+    color: #0322b9;
+    text-shadow: 0px 3px 0px #78f8db;
+    box-shadow: inset 0 -0.5em 0 #f8f928;
+    display: inline-block;
+    padding: 0 .2em; }
   body img {
     height: 4em;
     padding: 1em; }
@@ -44,7 +52,7 @@ body {
     display: block; }
 
 main {
-  margin: 0 auto;
+  margin: 4% auto;
   width: 90%; }
 
 .navbar {
@@ -54,20 +62,21 @@ main {
   font-size: 1em;
   padding: .5em 0;
   background-color: #3b3b3b;
+  margin: 0;
   width: 100%;
-  text-align: center;
-  display: inline-block; }
+  display: block;
+  margin: 0 auto; }
   .navbar a {
-    color: #fdf731;
+    color: #0095FE;
     text-decoration: none; }
     .navbar a:visited {
-      color: #fdf731;
+      color: #0095FE;
       text-decoration: none; }
     .navbar a:hover {
-      color: #fefdcb;
+      color: #bfe4fe;
       text-decoration: none; }
     .navbar a:active {
-      color: #fefdcb;
+      color: #bfe4fe;
       text-decoration: none; }
   .navbar:after {
     content: "";
@@ -91,17 +100,17 @@ main {
   .navbar .home-link, .navbar .about-link {
     display: block;
     background-image: url(img/buttons.png);
-    height: 98px; }
+    height: 65px; }
   .navbar .about-link {
-    width: 284px;
-    background-position: 0px 98px; }
+    width: 190px;
+    background-position: 0px 65px; }
   .navbar .about-link:active {
-    background-position: 284px 98px; }
+    background-position: 190px 65px; }
   .navbar .home-link {
-    width: 226px;
+    width: 151px;
     background-position: 0px 0px; }
   .navbar .home-link:active {
-    background-position: 342px 0px; }
+    background-position: 229px 0px; }
 
 .about:after {
   content: "";
@@ -111,8 +120,7 @@ main {
   text-decoration: none;
   list-style-type: none; }
 .about p {
-  padding-top: 1em;
-  text-align: center; }
+  padding-top: 1em; }
 .about img {
   height: 15%;
   margin: 8px 12px;
@@ -128,11 +136,11 @@ main {
       .about .characters .col {
         display: inline-block;
         float: left;
-        width: 20%;
-        padding: 1em; }
+        width: 15%;
+        padding: 1em;
+        margin-right: 1em; }
       .about .characters img {
-        /*float: left;*/
-        margin-right: 1.5em; }
+        margin: 0 0 1em 0; }
       .about .characters ul {
         /*float: left;*/
         padding: 0;
@@ -141,11 +149,24 @@ main {
         line-height: 1.3em;
         list-style-type: none; }
       .about .characters ul li:first-child {
+        font-family: "VT323", "System", sans-serif;
         font-weight: bold;
-        font-size: 1.5em;
-        line-height: 1em; } }
+        -webkit-font-smoothing: antialiased;
+        color: #0322b9;
+        text-shadow: 0px 2px 0px #78f8db;
+        font-size: 1.8em;
+        line-height: 1.2em; }
+      .about .characters ul li:nth-child(2) {
+        font-size: 1.4em;
+        color: #337893;
+        border-top: 2px solid #f8f928;
+        padding-top: .8em;
+        letter-spacing: 1px; }
+      .about .characters ul li:last-child {
+        color: #0322b9; } }
 .about .devs {
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  padding: 0; }
   .about .devs img {
     height: 32px;
     float: left; }
@@ -153,10 +174,14 @@ main {
     float: left; }
 
 .blurb p {
-  padding: 0;
-  text-align: center; }
+  padding: 0; }
 
 .title {
-  width: 10em; }
+  height: 20em; }
+
+#unityPlayer {
+  display: block;
+  margin: 0 auto;
+  width: 960px; }
 
 /*# sourceMappingURL=stylesheet.css.map */

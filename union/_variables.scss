@@ -1,19 +1,22 @@
-// --------------------- VARIABLES ---------------------- // 
+// --------------------- VARIABLES ---------------------- //
 
 // --- COLORS --- //
 
 // palettes
 $black: #3b3b3b;
-$grey: #c0c0c0;
-$color-main: mix(#00ff7c, #fff, 50%); 
+$grey: #e6e6e6;
+$color-main: #337893;
 $color-main-dark: mix($color-main, #000, 25%);
 $color-main-light: mix($color-main, #fff, 25%);
 $color-complement: complement($color-main);
 $color-complement-dark: mix($color-complement, #000, 25%);
 $color-complement-light: mix($color-complement, #fff, 25%);
-$color-alt: #fdf731;
+$color-alt: #0095FE;
 $color-alt-dark: mix($color-alt, #000, 25%);
 $color-alt-light: mix($color-alt, #fff, 25%);
+$yellow: #f8f928;
+$blue-dark: #0322b9;
+$blue-light: #78f8db;
 
 // functional colors
 $color-bg: $grey;

@@ -22,6 +22,7 @@ body {
 
 	background-color: $color-bg;
 	color: $black;
+	margin: 0;
 
 	h1 {
 	  font-family: $font-head;
@@ -29,7 +30,14 @@ body {
 	}
 
 	h3 {
-	  font-family: $font-head;
+		font-family: $font-head;
+		font-size: 2.2em;
+		-webkit-font-smoothing: antialiased;
+		color: $blue-dark;
+		text-shadow: 0px 3px 0px $blue-light;
+		box-shadow: inset 0 -.5em 0 $yellow;
+		display: inline-block;
+		padding: 0 .2em;
 	}
 
 	img {
@@ -52,7 +60,7 @@ body {
 }
 
 main {
-	margin: 0 auto;
+	margin: 4% auto;
 	width: 90%;
 }
 
@@ -64,14 +72,15 @@ main {
 	font-size:1em;
 	padding:.5em 0;
 	background-color:$black;
+	margin: 0;
 
 	a {
 		margin: 0 .5em;
 	}
 
 	width: 100%;
-	text-align:center;
-	display: inline-block;
+	display: block;
+	margin: 0 auto;
 
 	img {
 		height:50px;
@@ -96,21 +105,21 @@ main {
 	.home-link, .about-link {
 		display:block;
 		background-image: url(img/buttons.png);
-		height:98px;
+		height:65px;
 	}
 	.about-link {
-		width:284px;
-		background-position: 0px 98px;
+		width:190px;
+		background-position: 0px 65px;
 	}
 	.about-link:active {
-		background-position: 284px 98px;
+		background-position: 190px 65px;
 	}
 	.home-link {
-		width:226px;
+		width:151px;
 		background-position: 0px 0px;
 	}
 	.home-link:active {
-		background-position: 342px 0px;
+		background-position: 229px 0px;
 	}
 }
 
@@ -127,7 +136,7 @@ main {
 
 	p {
 		padding-top: 1em;
-		text-align: center;
+		// text-align: center;
 	}
 	img {
 		height: 15%;
@@ -153,13 +162,13 @@ main {
 			.col {
 				display: inline-block;
 				float: left;
-				width:20%;
-				padding:1em;
+				width: 15%;
+				padding: 1em;
+				margin-right: 1em;
 			}
 
 			img {
-				/*float: left;*/
-  				margin-right: 1.5em;
+				margin: 0 0 1em 0;
 			}
 			ul {
 				/*float: left;*/
@@ -170,9 +179,23 @@ main {
 				list-style-type: none;
 			}
 			ul li:first-child {
+				font-family: "VT323", "System", sans-serif;
 				font-weight: bold;
-				font-size: 1.5em;
-				line-height: 1em;
+				-webkit-font-smoothing: antialiased;
+				color: $blue-dark;
+				text-shadow: 0px 2px 0px $blue-light;
+				font-size: 1.8em;
+				line-height: 1.2em;
+			}
+			ul li:nth-child(2) {
+				font-size: 1.4em;
+				color: #337893;
+				border-top: 2px solid #f8f928;
+				padding-top: .8em;
+				letter-spacing: 1px;
+			}
+			ul li:last-child {
+				color: $blue-dark;
 			}
 		} // end of media query
 
@@ -180,6 +203,7 @@ main {
 
 	.devs {
 		margin-bottom: 2em;
+		padding: 0;
 
 		img {
 			height: 32px;
@@ -196,10 +220,15 @@ main {
 	{
 		p {
 			padding:0;
-			text-align:center;
+			// text-align:center;
 		}
 	}
 
 .title {
-	width: 10em;
+	height: 20em;
+}
+#unityPlayer {
+	display: block;
+margin: 0 auto;
+width: 960px;
 }
