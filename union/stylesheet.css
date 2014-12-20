@@ -8,7 +8,7 @@ body {
   /* Firefox, other Gecko */
   box-sizing: border-box;
   /* Opera/IE 8+ */
-  background-color: #e6e6e6;
+  background-color: #bebebe;
   color: #3b3b3b;
   margin: 0; }
   body:after {
@@ -16,13 +16,13 @@ body {
     display: table;
     clear: both; }
   body a {
-    color: #0095FE;
+    color: #0322b9;
     text-decoration: none; }
     body a:visited {
-      color: #0095FE;
+      color: #0322b9;
       text-decoration: none; }
     body a:hover {
-      color: #bfe4fe;
+      color: #0095FE;
       text-decoration: none; }
     body a:active {
       color: #bfe4fe;
@@ -67,13 +67,13 @@ main {
   display: block;
   margin: 0 auto; }
   .navbar a {
-    color: #0095FE;
+    color: #0322b9;
     text-decoration: none; }
     .navbar a:visited {
-      color: #0095FE;
+      color: #0322b9;
       text-decoration: none; }
     .navbar a:hover {
-      color: #bfe4fe;
+      color: #0095FE;
       text-decoration: none; }
     .navbar a:active {
       color: #bfe4fe;
@@ -160,8 +160,7 @@ main {
         font-size: 1.4em;
         color: #337893;
         border-top: 2px solid #f8f928;
-        padding-top: .8em;
-        letter-spacing: 1px; }
+        padding-top: .8em; }
       .about .characters ul li:last-child {
         color: #0322b9; } }
 .about .devs {

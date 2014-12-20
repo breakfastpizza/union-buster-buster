@@ -4,7 +4,7 @@
 
 // palettes
 $black: #3b3b3b;
-$grey: #e6e6e6;
+$grey: #bebebe;
 $color-main: #337893;
 $color-main-dark: mix($color-main, #000, 25%);
 $color-main-light: mix($color-main, #fff, 25%);
@@ -20,10 +20,10 @@ $blue-light: #78f8db;
 
 // functional colors
 $color-bg: $grey;
-$color-link: $color-alt;
-$color-vlink: $color-alt;
+$color-link: $blue-dark;
+$color-vlink: $blue-dark;
 $color-alink: $color-alt-light;
-$color-hlink: $color-alt-light;
+$color-hlink: $color-alt;
 
 // --- FONTS --- //
 

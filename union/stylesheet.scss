@@ -99,9 +99,6 @@ main {
 	}
 	// --- LINK SPRITE STYLING --- //
 
-	// HELP! This is broken! The HOME and ABOUT links don't display a background image at all :(
-	// Here is a link to my functionality demo: http://codepen.io/bedlogic/pen/ByoJYv/
-
 	.home-link, .about-link {
 		display:block;
 		background-image: url(img/buttons.png);
@@ -192,7 +189,6 @@ main {
 				color: #337893;
 				border-top: 2px solid #f8f928;
 				padding-top: .8em;
-				letter-spacing: 1px;
 			}
 			ul li:last-child {
 				color: $blue-dark;
